@@ -19,10 +19,11 @@ module.exports = async function (fastify, opts) {
     return { message: compiled}
   })
   
+/*
   fastify.options('/product', async function(request, reply) {
     return true
   })
-  
+*/
   fastify.post('/product', async function(request, reply) {
     let compiled = request.body.productName + ' - (' +request.body.productPrice + '€) added.'
     return { message: compiled}
